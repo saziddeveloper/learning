@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="description" content="Portfolio website of Ashaduzzaman (Sazid)">
+      <meta name="keywords" content="Portfolio,website,Ashaduzzaman,Sazid,Ashaduzzaman (Sazid)">
+      <meta name="author" content="Ashaduzzaman (Sazid)">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+      <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+      <title>CALCULATOR</title>
+      <!-- <link rel="stylesheet" href="/css/sazid.css"> -->
+      <script> 
+         function doCalculation() {
+            var first_value = document.getElementById("first-value").value;
+            var second_value = document.getElementById("second-value").value;
+            var operator = document.getElementById("operator").value;
+            var result = 0;
+            first_value = parseInt(first_value);
+            second_value = parseInt(second_value);
+            if(operator == "+"){
+               result = first_value + second_value;
+            } else if(operator == "-"){
+               result = first_value - second_value;
+            }else if(operator == "*"){
+               result = first_value * second_value;
+            }else if(operator == "/"){
+               result = first_value / second_value;
+            }else{
+               alert("The Operator is invalid!");
+            }
+            document.getElementById("result").value = result;
+         }  
+         // var btn = document.getElementById("calculate");
+         // console.log(btn);      
+         // btn.addEventListener("click", doCalculation);         
+         
+      </script>
+   </head>
+   <body>
+      <div class="container">
+         <div class="row">
+            <div class="col-md-2">
+               <label for="validationCustom01" class="form-label">Input first value</label>
+               <input type="text" class="form-control" id="first-value" value="" required>
+               <div class="valid-feedback">
+                  Looks good!
+               </div>
+            </div>
+         </div>
+         <br>
+         <div class="row">
+            <div class="col-md-2">
+               <label for="validationCustom01" class="form-label">Input second value</label>
+               <input type="text" class="form-control" id="second-value" value="" required>
+               <div class="valid-feedback">
+                  Looks good!
+               </div>
+            </div>
+         </div>
+         <br>
+         <div class="row">
+            <div class="col-2">
+               <select id="operator" class="form-select" aria-label="Default select example">
+                  <option selected>Select operator</option>
+                  <option value="+">Addition</option>
+                  <option value="-">Subtraction</option>
+                  <option value="*">Multiplication</option>
+                  <option value="/">Dividation</option>
+               </select>
+            </div>
+         </div>
+         <br>
+         <br>
+         <div class="row">
+            <div class="col-2">
+               <button id="calculate" class="btn btn-primary" type="button" onclick="doCalculation()">Let's Calculate</button>
+            </div>
+         </div>
+         <br>
+         <div class="row">
+            <div class="col-md-2">
+               <label for="validationCustom05" class="form-label">Calculation Restult:</label>
+               <input type="text" class="form-control" id="result">
+            </div>
+         </div>
+      </div>
+      <!-- Optional JavaScript; choose one of the two! -->
+
+      <!-- Option 1: Bootstrap Bundle with Popper -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+      <!-- Option 2: Separate Popper and Bootstrap JS -->
+      <!--
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+      -->
+   </body>
+   
+</html>
