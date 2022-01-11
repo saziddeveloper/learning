@@ -17,12 +17,12 @@
       <!-- <link rel="stylesheet" href="/css/sazid.css"> -->
       <script> 
          function doCalculation() {
-            var first_value = document.getElementById("first-value").value;
-            var second_value = document.getElementById("second-value").value;
+            var first_value_string = document.getElementById("first-value").value;
+            var second_value_string = document.getElementById("second-value").value;
             var operator = document.getElementById("operator").value;
             var result = 0;
-            first_value = parseInt(first_value);
-            second_value = parseInt(second_value);
+            var first_value = parseInt(first_value_string);
+            var second_value = parseInt(second_value_string);
             if(operator == "+"){
                result = first_value + second_value;
             } else if(operator == "-"){
